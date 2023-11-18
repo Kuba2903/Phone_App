@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainScreenView" Height="400" Width="400">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#d3f752" Offset="0"></GradientStop>
+                <GradientStop Color="Beige" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -20,7 +27,90 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
-        
+
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Time}" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" FontSize="27"/>
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Text="{Binding Date, StringFormat=dd-MM-yyyy}"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+
+        <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App//img/icons8-battery-30.png" Grid.Column="3" Width="30" HorizontalAlignment="Right"
+               VerticalAlignment="Top" />
+        <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App//img/icons8-wi-fi-24.png" Grid.Column="3" Width="30" HorizontalAlignment="Center"
+               VerticalAlignment="Top"/>
+        <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-bluetooth-30.png" Grid.Column="3" Width="30" HorizontalAlignment="Left"
+               VerticalAlignment="Top"/>
+        <!--Buttons-->
+
+        <Button Grid.Row="3">
+            <Button.Content>
+                <StackPanel>
+                    <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-phone-100.png" Width="50" Height="50"/>
+                    <TextBlock Text="Contacts" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="1">
+            <Button.Content>
+                <StackPanel>
+                    <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-message-100.png" Width="50" Height="50"/>
+                    <TextBlock Text="Messages" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="2">
+            <Button.Content>
+                <StackPanel>
+                    <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-images-96.png" Width="50" Height="50"/>
+                    <TextBlock Text="Images" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="3">
+            <Button.Content>
+                <StackPanel>
+                    <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-web-browser-100.png" Width="50" Height="50"/>
+                    <TextBlock Text="Web browser" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+
+        <Button Grid.Row="2">
+            <Button.Content>
+                <StackPanel>
+                    <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-calendar-100.png" Width="50" Height="50"/>
+                    <TextBlock Text="Calendar" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="1">
+            <Button.Content>
+                <StackPanel>
+                    <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-calculator-100.png" Width="50" Height="50"/>
+                    <TextBlock Text="Calculator" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="2">
+            <Button.Content>
+                <StackPanel>
+                    <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-youtube-100.png" Width="50" Height="50"/>
+                    <TextBlock Text="Youtube" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="3">
+            <Button.Content>
+                <StackPanel>
+                    <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-facebook-100.png" Width="50" Height="50"/>
+                    <TextBlock Text="Facebook" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
     </Grid>
 </Window>

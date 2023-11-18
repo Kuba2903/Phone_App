@@ -18,3 +18,4 @@ C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\refint\
 C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Phone_App.pdb
 C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Phone_App.genruntimeconfig.cache
 C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\ref\Phone_App.dll
+C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\App.baml

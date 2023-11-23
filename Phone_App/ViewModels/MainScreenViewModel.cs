@@ -15,21 +15,31 @@ namespace Phone_App.ViewModels
     public class MainScreenViewModel : MainScreenModel
     {
 
-        public ICommand OpenContacts { get; set; }
+        public ICommand OpenContactsCommand { get; set; }
+        public ICommand OpenCalculatorCommand { get; set; }
         public MainScreenViewModel()
         {
             Date = DateTime.Now.Date;
             UpdateTime();
             StartTimer();
-            OpenContacts = new RelayCommand(OpenContactsBook, CanOpenContactsBook);
+            OpenContactsCommand = new RelayCommand(OpenContactsBook, CanOpenContactsBook);
+            OpenCalculatorCommand = new RelayCommand(OpenCalculator, CanOpenCalculator);
         }
 
+        private bool CanOpenCalculator(object obj) => true;
+
         private bool CanOpenContactsBook(object obj) => true;
+
+        private void OpenCalculator(object obj)
+        {
+            CalculatorView view = new CalculatorView();
+            view.ShowDialog();
+        }
 
         private void OpenContactsBook(object obj)
         {
             ContactsBookView view = new ContactsBookView();
-            view.Show();
+            view.ShowDialog();
         }
 
         private void UpdateTime() => Time = $"{DateTime.Now.Hour:D2}:{DateTime.Now.Minute:D2}";

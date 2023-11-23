@@ -60,3 +60,7 @@ C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Phone_A
 C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Phone_App.csproj.CopyComplete
 C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Views\NewContactView.g.cs
 C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Views\NewContactView.baml
+C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Views\ModifyContactView.g.cs
+C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Views\ModifyContactView.baml
+C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Views\CalculatorView.g.cs
+C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Views\CalculatorView.baml

@@ -1,0 +1,38 @@
+﻿<Window x:Class="Phone_App.Views.AudioPlayerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Phone_App.Views"
+        mc:Ignorable="d"
+        Title="AudioPlayerView" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="General">
+                <StackPanel Margin="10">
+                    <WrapPanel>
+                        <Button Content="Pick a song" Padding="5" Margin="10,10" Height="40" Width="100"/>
+                        <TextBlock Text="Time" Margin="15" Foreground="Blue" />
+                        <TextBlock Text="Song" MinWidth="200" Margin="30,15,0,0" />
+                    </WrapPanel>
+
+                    <Grid>
+                        <ProgressBar Margin="20" Height="20"/>
+                        <Slider Thumb.DragStarted="sl_DragStarted" Margin="20"
+                                Thumb.DragCompleted="sl_DragCompleted"/>
+                        <TextBlock Text=""
+                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <WrapPanel HorizontalAlignment="Center" Margin="75">
+                        <Button Content="Play" Height="70" Width="90" FontSize="20" />
+                        <Button Content="Pause" Height="70" Width="90" FontSize="20" />
+                        <Button Content="Stop" Height="70" Width="90" FontSize="20" />
+                    </WrapPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Settings">
+                
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

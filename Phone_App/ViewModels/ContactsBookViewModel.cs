@@ -33,6 +33,7 @@ namespace Phone_App.ViewModels
 
         public ICommand AddContactCommand { get; set; }
         public ICommand DeleteContactCommand { get; set; }
+        public ICommand ModifyContactCommand { get; set; }
         private int contactIdToDelete;
         public int ContactIdToDelete
         {
@@ -52,7 +53,20 @@ namespace Phone_App.ViewModels
             LoadContacts();
             AddContactCommand = new RelayCommand(AddNewContact, TryAddContact);
             DeleteContactCommand = new RelayCommand(DeleteContact, TryDeleteContact);
+            ModifyContactCommand = new RelayCommand(ModifyContact, TryModifyContact);
         }
+
+        private void ModifyContact(object obj)
+        {
+            ModifyContactViewModel viewModel = new ModifyContactViewModel(_dbContext);
+            ModifyContactView view = new ModifyContactView(_dbContext);
+            view.DataContext = viewModel;
+            view.ShowDialog();
+
+            LoadContacts();
+        }
+
+        private bool TryModifyContact(object obj) => true;
 
         private bool TryDeleteContact(object obj) => true;
 
@@ -89,10 +103,8 @@ namespace Phone_App.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        protected virtual void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+       
 
     }
 }

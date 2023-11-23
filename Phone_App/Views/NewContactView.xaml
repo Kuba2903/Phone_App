@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Phone_App.Views"
         mc:Ignorable="d"
-        Title="NewContactView" Height="210" Width="300">
+        Title="NewContactView" Height="220" Width="300">
     <Canvas>
         <Label Content="Enter name:" Canvas.Top="10" />
         <TextBox Text="{Binding NewContact.Name}" MinWidth="100" Canvas.Top="15" Canvas.Left="100"/>
         <Label Content="Enter phone:" Canvas.Top="50" />
-        <TextBox Text="{Binding NewContact.Number}" MinWidth="100" Canvas.Top="55" Canvas.Left="100"/>
+        <TextBox Text="{Binding NewContact.Number}" MinWidth="100" Canvas.Top="55" Canvas.Left="100"
+                 MaxLength="9" PreviewTextInput="NumberValidationTextBox"/>
         <Label Content="Enter email:" Canvas.Top="90" />
         <TextBox Text="{Binding NewContact.Email}" MinWidth="100" Canvas.Top="95" Canvas.Left="100"/>
         <Label Content="Enter address:" Canvas.Top="130" />

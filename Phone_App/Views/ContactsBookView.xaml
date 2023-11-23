@@ -23,7 +23,7 @@
         </DataGrid>
 
         <Button Grid.Column="1" Content="Add contact" Margin="20" Command="{Binding AddContactCommand}"/>
-        <Button Grid.Column="1" Grid.Row="1" Margin="20" Content="Modify contact"/>
+        <Button Grid.Column="1" Grid.Row="1" Margin="20" Content="Modify contact" Command="{Binding ModifyContactCommand}"/>
 
         <Label Grid.Column="1" Grid.Row="2" Content=""/>
         <TextBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Top"

@@ -25,6 +25,9 @@
     <Compile Update="Views\NewContactView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\TicTacToeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\AudioPlayerView.xaml">
@@ -43,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\NewContactView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TicTacToeView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -17,6 +17,8 @@ namespace Phone_App.ViewModels
 
         public ICommand OpenContactsCommand { get; set; }
         public ICommand OpenCalculatorCommand { get; set; }
+        public ICommand OpenAudioPlayerCommand { get; set; }
+        public ICommand OpenTicTacToeCommand { get; set; }
         public MainScreenViewModel()
         {
             Date = DateTime.Now.Date;
@@ -24,12 +26,29 @@ namespace Phone_App.ViewModels
             StartTimer();
             OpenContactsCommand = new RelayCommand(OpenContactsBook, CanOpenContactsBook);
             OpenCalculatorCommand = new RelayCommand(OpenCalculator, CanOpenCalculator);
+            OpenAudioPlayerCommand = new RelayCommand(OpenAudioPlayer, CanOpenAudioPlayer);
+            OpenTicTacToeCommand = new RelayCommand(OpenTicTacToe, CanOpenTicTacToe);
         }
+
+        private bool CanOpenTicTacToe(object obj) => true;
+
+        private bool CanOpenAudioPlayer(object obj) => true;
 
         private bool CanOpenCalculator(object obj) => true;
 
         private bool CanOpenContactsBook(object obj) => true;
 
+
+        private void OpenTicTacToe(object obj)
+        {
+            TicTacToeView view = new TicTacToeView();
+            view.ShowDialog();
+        }
+        private void OpenAudioPlayer(object obj)
+        {
+            AudioPlayerView view = new AudioPlayerView();
+            view.ShowDialog();
+        }
         private void OpenCalculator(object obj)
         {
             CalculatorView view = new CalculatorView();

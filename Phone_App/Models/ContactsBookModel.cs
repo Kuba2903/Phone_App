@@ -21,31 +21,4 @@ namespace Phone_App.Models
         public string? Email { get; set; }
         public string? Address { get; set; }
     }
-
-    public static class ContactsMapper
-    {
-        public static ContactsBookModel EntityToModel(ContactsEntity entity)
-        {
-            return new ContactsBookModel()
-            {
-                Id = entity.ID,
-                Name = entity.Name,
-                Number = entity.Number,
-                Email = entity.Email,
-                Address = entity.Address
-            };
-        }
-
-        public static ContactsEntity ModelToEntity(ContactsBookModel model)
-        {
-            return new ContactsEntity()
-            {
-                ID = model.Id,
-                Name = model.Name,
-                Number = model.Number,
-                Email = model.Email,
-                Address = model.Address
-            };
-        }
-    }
 }

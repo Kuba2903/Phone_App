@@ -77,7 +77,7 @@ namespace Phone_App.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Phone_App;V1.0.0.0;component/views/calculatorview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Phone_App;component/views/calculatorview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\CalculatorView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

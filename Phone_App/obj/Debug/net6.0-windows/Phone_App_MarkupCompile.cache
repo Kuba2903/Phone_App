@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\bigie\source\repos\Phone_App\Phone_App\App.xaml
-5-1109013475
+7-1907290123
 
-14879473802
-21376856809
-Views\CalculatorView.xaml;Views\ContactsBookView.xaml;Views\MainScreenView.xaml;Views\ModifyContactView.xaml;Views\NewContactView.xaml;
+181540289094
+218-141496345
+Views\AudioPlayerView.xaml;Views\CalculatorView.xaml;Views\ContactsBookView.xaml;Views\MainScreenView.xaml;Views\ModifyContactView.xaml;Views\NewContactView.xaml;Views\TicTacToeView.xaml;
 
 False
 

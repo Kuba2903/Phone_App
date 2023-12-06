@@ -70,7 +70,7 @@
             </Button.Content>
         </Button>
 
-        <Button Grid.Row="4" Grid.Column="2">
+        <Button Grid.Row="4" Grid.Column="2" Command="{Binding OpenTicTacToeCommand}">
             <Button.Content>
                 <StackPanel>
                     <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-images-96.png" Width="50" Height="50"/>
@@ -88,11 +88,11 @@
             </Button.Content>
         </Button>
 
-        <Button Grid.Row="3">
+        <Button Grid.Row="3" Command="{Binding OpenAudioPlayerCommand}">
             <Button.Content>
                 <StackPanel>
-                    <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-calendar-100.png" Width="50" Height="50"/>
-                    <TextBlock Text="Calendar" HorizontalAlignment="Center"/>
+                    <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-music-96.png" Width="50" Height="50"/>
+                    <TextBlock Text="Music" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button.Content>
         </Button>

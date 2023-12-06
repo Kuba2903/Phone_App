@@ -3,36 +3,48 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Phone_App.Views"
+        xmlns:local="clr-namespace:Phone_App.Views" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:viewmodels="clr-namespace:Phone_App.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:AudioPlayerViewModel}"
         mc:Ignorable="d"
-        Title="AudioPlayerView" Height="450" Width="800">
+        Title="AudioPlayerView" Height="400" Width="500">
     <Grid>
-        <TabControl>
-            <TabItem Header="General">
-                <StackPanel Margin="10">
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#eb7134" Offset="0" />
+                <GradientStop Color="#d2de2c" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackPanel Margin="10">
                     <WrapPanel>
-                        <Button Content="Pick a song" Padding="5" Margin="10,10" Height="40" Width="100"/>
-                        <TextBlock Text="Time" Margin="15" Foreground="Blue" />
-                        <TextBlock Text="Song" MinWidth="200" Margin="30,15,0,0" />
+                        <Button Content="Pick a song" Padding="5" Margin="10,10" Height="40" Width="100"
+                                Command="{Binding PickASongCommand}"/>
+                        <TextBlock Text="{Binding Time}" Margin="15" Foreground="Blue" />
+                        <TextBlock Text="{Binding Song}" MinWidth="200" Margin="30,15,0,0" />
                     </WrapPanel>
 
                     <Grid>
-                        <ProgressBar Margin="20" Height="20"/>
-                        <Slider Thumb.DragStarted="sl_DragStarted" Margin="20"
-                                Thumb.DragCompleted="sl_DragCompleted"/>
-                        <TextBlock Text=""
-                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <ProgressBar Maximum="{Binding PBMaximum}" Value="{Binding PBValue}" Margin="20" 
+                                     Height="20"/>
+                        <Slider Maximum="{Binding SLMaximum}" Value="{Binding SLValue}" Margin="20">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="DragStarted">
+                                    <i:InvokeCommandAction Command="{Binding SliderDragStartedCommand}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="DragCompleted">
+                                    <i:InvokeCommandAction Command="{Binding SliderDragCompletedCommand}" />
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Slider>
+                        <TextBlock Text="{Binding ElementName=pbPlay, Path=Value, StringFormat={}{0:0}%}"
+                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                     <WrapPanel HorizontalAlignment="Center" Margin="75">
-                        <Button Content="Play" Height="70" Width="90" FontSize="20" />
-                        <Button Content="Pause" Height="70" Width="90" FontSize="20" />
-                        <Button Content="Stop" Height="70" Width="90" FontSize="20" />
+                        <Button Content="Play" Height="70" Width="90" FontSize="20" IsEnabled="{Binding IsPlayEnabled}"
+                                Command="{Binding PlayMusicCommand}"/>
+                        <Button Content="Pause" Height="70" Width="90" FontSize="20" IsEnabled="{Binding IsPauseEnabled}"
+                                Command="{Binding PauseMusicCommand}"/>
+                        <Button Content="Stop" Height="70" Width="90" FontSize="20" IsEnabled="{Binding IsStopEnabled}"
+                                Command="{Binding StopMusicCommand}"/>
                     </WrapPanel>
                 </StackPanel>
-            </TabItem>
-            <TabItem Header="Settings">
-                
-            </TabItem>
-        </TabControl>
     </Grid>
 </Window>

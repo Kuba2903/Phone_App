@@ -1,0 +1,46 @@
+﻿<Window x:Class="Phone_App.Views.WebBrowserView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Phone_App.Views"
+        mc:Ignorable="d"
+        Title="Web Browser" Height="400" Width="650"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <Style x:Key="styleButton" TargetType="Button">
+                <Setter Property="Background" Value="LightBlue"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width" Value="50"/>
+            </Style>
+        </Grid.Resources>
+        
+        <DockPanel Grid.Row="0" Margin="5">
+            <ToolBar DockPanel.Dock="Top">
+                <Button Content="Back" Style="{StaticResource styleButton}" />
+                <Button Content="Next" Style="{StaticResource styleButton}" />
+                <Separator />
+                <TextBox Text="Https://" MinWidth="400" x:Name="UrlTxt">
+                    <TextBox.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Cut" Command="ApplicationCommands.Cut" />
+                            <MenuItem Header="Copy" Command="ApplicationCommands.Copy" />
+                            <MenuItem Header="Paste" Command="ApplicationCommands.Paste" />
+                        </ContextMenu>
+                    </TextBox.ContextMenu>
+                </TextBox>
+                <Separator />
+                <Button Content="Go" Style="{StaticResource styleButton}" Margin="5,0,0,0" />
+            </ToolBar>
+        </DockPanel>
+        <Border Grid.Row="1" BorderThickness="2" BorderBrush="Black">
+            <WebBrowser x:Name="wb" Navigating="WebBrowser_Navigating" Navigated="WebBrowser_Navigated"/>
+        </Border>
+    </Grid>
+</Window>

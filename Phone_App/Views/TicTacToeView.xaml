@@ -8,6 +8,13 @@
         mc:Ignorable="d"
         Title="TicTacToeView" Height="400" Width="550">
     <Grid>
+
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="LightBlue" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>

@@ -19,6 +19,7 @@ namespace Phone_App.ViewModels
         public ICommand OpenCalculatorCommand { get; set; }
         public ICommand OpenAudioPlayerCommand { get; set; }
         public ICommand OpenTicTacToeCommand { get; set; }
+        public ICommand OpenWebBrowserCommand { get; set; }
         public MainScreenViewModel()
         {
             Date = DateTime.Now.Date;
@@ -28,7 +29,10 @@ namespace Phone_App.ViewModels
             OpenCalculatorCommand = new RelayCommand(OpenCalculator, CanOpenCalculator);
             OpenAudioPlayerCommand = new RelayCommand(OpenAudioPlayer, CanOpenAudioPlayer);
             OpenTicTacToeCommand = new RelayCommand(OpenTicTacToe, CanOpenTicTacToe);
+            OpenWebBrowserCommand = new RelayCommand(OpenWebBrowser, CanOpenWebBrowser);
         }
+
+        private bool CanOpenWebBrowser(object obj) => true;
 
         private bool CanOpenTicTacToe(object obj) => true;
 
@@ -38,6 +42,11 @@ namespace Phone_App.ViewModels
 
         private bool CanOpenContactsBook(object obj) => true;
 
+        private void OpenWebBrowser(object obj)
+        {
+            WebBrowserView view = new WebBrowserView();
+            view.ShowDialog();
+        }
 
         private void OpenTicTacToe(object obj)
         {

@@ -222,15 +222,18 @@ namespace Phone_App.ViewModels
 
         private void SwitchPlayers(int rows)
         {
-            if(SwitchPlayer)
+            if (Board[rows] == ' ')
             {
-                SwitchPlayer = false;
-                Board[rows] = 'X';
-            }
-            else
-            {
-                SwitchPlayer = true;
-                Board[rows] = 'O';
+                if (SwitchPlayer)
+                {
+                    SwitchPlayer = false;
+                    Board[rows] = 'X';
+                }
+                else
+                {
+                    SwitchPlayer = true;
+                    Board[rows] = 'O';
+                }
             }
         }
     }

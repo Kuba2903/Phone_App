@@ -86,3 +86,5 @@ C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Views\T
 C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Views\TicTacToeView.baml
 C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Views\WebBrowserView.g.cs
 C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Views\WebBrowserView.baml
+C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Views\HangManView.g.cs
+C:\Users\bigie\source\repos\Phone_App\Phone_App\obj\Debug\net6.0-windows\Views\HangManView.baml

@@ -26,5 +26,36 @@ namespace Phone_App.Views
             MainScreenViewModel model = new MainScreenViewModel();
             this.DataContext = model;
         }
+
+        private void rbYellow_White_Checked(object sender, RoutedEventArgs e)
+        {
+            if(rbYellow_White.IsChecked == true)
+            {
+                var gradientBrush = new LinearGradientBrush();
+                gradientBrush.GradientStops.Add(new GradientStop(Colors.Yellow, 0));
+                gradientBrush.GradientStops.Add(new GradientStop(Colors.Beige, 1));
+                content.Background = gradientBrush;
+            }
+        }
+
+        private void rbBlue_Red_Checked(object sender, RoutedEventArgs e)
+        {
+            if(rbBlue_Red.IsChecked == true)
+            {
+                var gradientBrush = new LinearGradientBrush();
+                gradientBrush.GradientStops.Add(new GradientStop(Colors.Blue, 0));
+                gradientBrush.GradientStops.Add(new GradientStop(Colors.Red, 1));
+                content.Background = gradientBrush;
+            }
+        }
+
+        private void rbViolet_Checked(object sender, RoutedEventArgs e)
+        {
+            if(rbViolet.IsChecked == true)
+            {
+                content.Background = Brushes.Violet;
+            }
+            
+        }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Phone_App.Views"
         mc:Ignorable="d"
         Title="MainScreenView" Height="400" Width="400">
-    <Grid>
+    <Grid x:Name="content">
         <Grid.Background>
             <LinearGradientBrush>
                 <GradientStop Color="#d3f752" Offset="0"></GradientStop>
@@ -36,6 +36,16 @@
                     <Calendar/>
                 </MenuItem>
                 <Separator/>
+                <MenuItem Header="Change background">
+                    <RadioButton Content="Yellow/White" IsChecked="True" x:Name="rbYellow_White"
+                                 Checked="rbYellow_White_Checked" />
+                    <RadioButton Content="Blue/Red" IsChecked="false" x:Name="rbBlue_Red" 
+                                 Checked="rbBlue_Red_Checked" />
+                    <RadioButton Content="Violet" IsChecked="false" x:Name="rbViolet" 
+                                 Checked="rbViolet_Checked" />
+
+
+                </MenuItem>
             </MenuItem>
         </Menu>
 
@@ -106,11 +116,11 @@
             </Button.Content>
         </Button>
 
-        <Button Grid.Row="3" Grid.Column="2">
+        <Button Grid.Row="3" Grid.Column="2" Command="{Binding OpenHangManCommand}">
             <Button.Content>
                 <StackPanel>
-                    <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-youtube-100.png" Width="50" Height="50"/>
-                    <TextBlock Text="Youtube" HorizontalAlignment="Center"/>
+                    <Image Source="C:/Users/bigie/source/repos/Phone_App/Phone_App/img/icons8-hangman-100.png" Width="50" Height="50"/>
+                    <TextBlock Text="Hangman" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button.Content>
         </Button>
